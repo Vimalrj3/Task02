@@ -148,7 +148,7 @@ data=mycol.aggregate(
 [{"$match": 
    {"$expr": 
      
-       {"$gt": [{"$max": "$scores.score"}, 40]}
+       {"$gt": [{"$min": "$scores.score"}, 40]}
       
     }
   }])
